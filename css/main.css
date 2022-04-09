@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;500;600&display=swap");
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: url("../images/BG.png") #1f232f;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body h1 {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: lighter;
+  font-size: 32px;
+  line-height: 38px;
+  text-transform: uppercase;
+
+  text-align: center;
+
+  color: #ffffff;
+}
+
+@media screen and (max-width: 1185px) {
+  body .menu .blocks {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  body .menu .crypto:first-child {
+    margin-top: 0px;
+  }
+
+  body .menu .crypto {
+    margin-right: 0 !important;
+    margin-top: 24px;
+  }
+}
+
+@media screen and (max-width: 1410px) {
+  body .menu .crypto {
+    width: 350px !important;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  body .menu .crypto {
+    width: 350px !important;
+  }
+}
+
+body .menu .blocks {
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
+}
+
+body .menu .crypto:last-child {
+  margin-right: 0;
+}
+
+body .menu .crypto {
+  position: relative;
+  background: linear-gradient(99.85deg, #1d212b 0%, #2a2d36 100%);
+  width: 20vw;
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  color: #3d4049;
+  margin-right: 24px;
+  border-radius: 15px;
+}
+
+body .menu .crypto .margin {
+  margin: 32px;
+
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+body .menu .crypto img {
+  width: 60px;
+ 
+  margin-right: 30px;
+}
+
+body .menu .crypto .info h3,
+body .menu .crypto .info p {
+  margin: 0;
+}
+
+body .menu .crypto .info h3 {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+
+  color: #ffffff;
+}
+
+body .menu .crypto .info .stats {
+  margin-top: 8px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+body .menu .crypto .info .stats span {
+  color: #ffffff;
+}
+
+body .menu .crypto .info p {
+  margin-top: 8px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+
+body .menu .crypto .progressbar {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 16px;
+  background: #3d4049;
+  border-radius: 4px;
+}
+
+body .menu .crypto .progress {
+  position: absolute;
+  bottom: 0;
+  width: 40%;
+  height: 16px;
+  background: linear-gradient(135deg,  #5900FF , #2980B9 65% , #FFFFFF);
+  border-radius: 4px;
+  background-size: 115% 115%;
+  transition: all 1s ease;
+  animation: pulse 1s infinite;
+  animation: gradient 1.2s ease infinite;
+}
+
+body .menu .crypto {
+  width: 350px !important;
+}
+
+.coinmarketcap-currency-widget {
+  border-radius: 4px;
+}
+
+@keyframes gradient {
+  0% {
+      background-position: 0 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0 50%;
+  }
+}
+.count-particles{
+  background: #000022;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 80px;
+  color: #13E8E9;
+  font-size: .8em;
+  text-align: left;
+  text-indent: 4px;
+  line-height: 14px;
+  padding-bottom: 2px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+
+.js-count-particles{
+  font-size: 1.1em;
+
+}
+
+#stats,
+.count-particles{
+  -webkit-user-select: none;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+#stats{
+  border-radius: 3px 3px 0 0;
+  overflow: hidden;
+}
+
+.count-particles{
+  border-radius: 0 0 3px 3px;
+}
+.stats{
+  white-space: nowrap;
+}
+
+/* ---- particles.js container ---- */
+
+#particles-js{
+ 
+  width: 100%;
+  height: 100%;
+  background-image: url('');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+html{
+-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+canvas{
+  position: fixed;
+  top: 0;
+  display:block;
+  vertical-align:bottom;
+}
+.blocks{
+ position: absolute;
+ justify-content: center;
+}
+.menu{
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  padding-top: 300px;
+}
+.center2{
+  display: flex;
+  justify-content: center;
+
+}
+@media(max-width: 600px){
+  .menu{
+    padding-top: 100px;
+  }
+}
+  

